@@ -23,9 +23,8 @@ jobs:
         run: python clean_calendar.py
 
       - name: Output pushen
-        run: |
-          git config user.name "github-actions"
-          git config user.email "actions@github.com"
-          git add public/rlp_kalender_cleaned.ics
-          git commit -m "Update Kalender"
-          git push
+  run: |
+    git config user.name "github-actions"
+    git config user.email "actions@github.com"
+    git add docs/rlp_kalender_cleaned.ics
+    git diff --cached --quiet || (git commit -m "Update Kalender" && git push)
