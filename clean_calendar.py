@@ -7,7 +7,7 @@ from pathlib import Path
 ICAL_URL = "https://modulverwaltung.rlp.de/sembbs/dispatch.php/ical/index/TTJB6wS5"
 
 # Ziel-Datei
-OUTPUT_FILE = Path("public/rlp_kalender_cleaned.ics")
+OUTPUT_FILE = Path("docs/rlp_kalender_cleaned.ics")
 
 def fetch_and_clean_calendar():
     response = requests.get(ICAL_URL)
